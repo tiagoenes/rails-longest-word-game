@@ -1,0 +1,12 @@
+<div class="container text-center">
+  <h1>Your score</h1>
+  <div class="score">
+    <div class="time"><%= @result[:time] %></div>
+    <div class="score"><%= @result[:score] %></div>
+    <div class="message"><%= @result[:message] %></div>
+  </div>
+  <%= link_to new_path do %>
+    <i class="fas fa-play"></i> New Game
+  <% end %>
+</div>
+

@@ -1,0 +1,15 @@
+<div class="container text-center">
+  <h1>New Game</h1>
+  <div class="grid-letters justify-content-center">
+      <% @letters.each do|letter| %>
+      <div class="letter"> <%= letter %></div>
+      <% end %>
+      <div><a href="new" class="refresh"><i class="fas fa-sync-alt"></i></a></div>
+  </div>
+  <form action="score" method="post" >
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :letters, @letters %>
+    <%= hidden_field_tag :start_time, Time.now %>
+    <input type="text" name="inserted" autofocus>
+  </form>
+</div>
